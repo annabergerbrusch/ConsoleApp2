@@ -10,11 +10,8 @@ namespace ConsoleApp2
     {
         static void Main(string[] args)
         {
-
-
             Console.WriteLine("Indtast navn");
             string navn = Console.ReadLine();
-
             string uppernavn = navn.ToUpper();
             Console.WriteLine("Velkommen" + " " + uppernavn);
             Console.WriteLine("Tryk en tast for at fortsætte");
