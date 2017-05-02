@@ -31,7 +31,7 @@ namespace MånedslønGennemsnit
 
             for (int i = 0; i < 6; i++)
             Console.WriteLine(månedslønninger[i]);
-            string gnsString = gns.ToString();
+            string gnsString = gns.ToString("N2");
             Console.WriteLine("Gennemsnitsløn " + gnsString);
             
 
@@ -39,14 +39,14 @@ namespace MånedslønGennemsnit
             // Strenge
 
 
-            string navn;
-            navn = null;
-            navn = "Mikkel";
-            string nytnavn = navn.ToUpper();
-            Console.WriteLine(nytnavn);
-            Console.WriteLine(navn.Substring(0, 2));
-            Console.WriteLine(navn.PadLeft(10, '*'));
-            Console.WriteLine(navn.IndexOf('k', 3));
+            //string navn;
+            //navn = null;
+            //navn = "Mikkel";
+            //string nytnavn = navn.ToUpper();
+            //Console.WriteLine(nytnavn);
+            //Console.WriteLine(navn.Substring(0, 2));
+            //Console.WriteLine(navn.PadLeft(10, '*'));
+            //Console.WriteLine(navn.IndexOf('k', 3));
 
             string fnavn = "Mikkel";
             string enavn = "Cronberg";
@@ -54,11 +54,41 @@ namespace MånedslønGennemsnit
             Console.WriteLine(full);
             Console.WriteLine($"{fnavn} {enavn}");
 
-            
-            
+
+
             //System.Text.StringBuilder. Bruges når man har med streng og løkker at gøre.
 
+            // Arbejde med strenge:
 
+            string navn = "Mikkel";
+            string efternavn = "Cronberg";
+            string samletStreng = navn + " " + enavn;
+            string navnStort = samletStreng.ToUpper();
+            Console.WriteLine(navnStort);
+            string lilleNavn = navnStort.ToLower();
+            Console.WriteLine(lilleNavn);
+            string del = samletStreng.Substring(7,4);
+            Console.WriteLine(del);
+
+            string[] array1 = { navn, efternavn };
+            for (int i = 0; i < 2; i++)
+                Console.WriteLine(array1[i]);
+
+
+            // 10-tabel:
+
+            for (int i = 1; i < 11; i++)
+            {
+                for (int j = 1; j < 11; j++)
+                {
+                    string tal = (i * j).ToString();
+                    if (i * j < 51)
+                        Console.ForegroundColor = ConsoleColor.White;
+                    else Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.Write(tal.PadLeft(4,'*'));
+                }
+                Console.WriteLine();
+            }
 
 
 
