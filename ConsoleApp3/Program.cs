@@ -33,8 +33,37 @@ namespace MånedslønGennemsnit
             Console.WriteLine(månedslønninger[i]);
             string gnsString = gns.ToString();
             Console.WriteLine("Gennemsnitsløn " + gnsString);
-            Console.ReadKey();
+            
 
+
+            // Strenge
+
+
+            string navn;
+            navn = null;
+            navn = "Mikkel";
+            string nytnavn = navn.ToUpper();
+            Console.WriteLine(nytnavn);
+            Console.WriteLine(navn.Substring(0, 2));
+            Console.WriteLine(navn.PadLeft(10, '*'));
+            Console.WriteLine(navn.IndexOf('k', 3));
+
+            string fnavn = "Mikkel";
+            string enavn = "Cronberg";
+            string full = fnavn + " " + enavn;
+            Console.WriteLine(full);
+            Console.WriteLine($"{fnavn} {enavn}");
+
+            
+            
+            //System.Text.StringBuilder. Bruges når man har med streng og løkker at gøre.
+
+
+
+
+
+            Console.ReadKey();
         }
     }
 }
+
